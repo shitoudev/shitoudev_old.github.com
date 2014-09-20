@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>中文版Putty、WinSCP、SSHSecure和psftp等软件爆出后门 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前段时间有看到消息说中文版Putty、WinSCP软件有后门，不知道是真是假，今天收到阿里云的邮件（阿里云的邮件是10号发的），应该不假了。还好我没用中文版的，虽然英文很烂，但是至少能使用这些软件，奉劝大家能用英文版尽量用英文版吧，这些人太没道德了。我算躲过一劫呀！
+邮件内容：
+尊敬的阿里云用户:您好!近日，阿里云·云盾安全服务中心发现：中文版putty等SSH远程管理工具被曝出存在后门，该后门会">
+<meta property="og:type" content="article">
+<meta property="og:title" content="中文版Putty、WinSCP、SSHSecure和psftp等软件爆出后门">
+<meta property="og:url" content="http://zhenown.com/2012/02/13/中文版putty、winscp、sshsecure和psftp等软件爆出后门/">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前段时间有看到消息说中文版Putty、WinSCP软件有后门，不知道是真是假，今天收到阿里云的邮件（阿里云的邮件是10号发的），应该不假了。还好我没用中文版的，虽然英文很烂，但是至少能使用这些软件，奉劝大家能用英文版尽量用英文版吧，这些人太没道德了。我算躲过一劫呀！
+邮件内容：
+尊敬的阿里云用户:您好!近日，阿里云·云盾安全服务中心发现：中文版putty等SSH远程管理工具被曝出存在后门，该后门会">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="中文版Putty、WinSCP、SSHSecure和psftp等软件爆出后门">
+<meta name="twitter:description" content="前段时间有看到消息说中文版Putty、WinSCP软件有后门，不知道是真是假，今天收到阿里云的邮件（阿里云的邮件是10号发的），应该不假了。还好我没用中文版的，虽然英文很烂，但是至少能使用这些软件，奉劝大家能用英文版尽量用英文版吧，这些人太没道德了。我算躲过一劫呀！
+邮件内容：
+尊敬的阿里云用户:您好!近日，阿里云·云盾安全服务中心发现：中文版putty等SSH远程管理工具被曝出存在后门，该后门会">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="https://avatars2.githubusercontent.com/u/2024949?v=2&amp;s=150">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">zhenwen</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="onoffswitch">
+			    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+			    <label class="onoffswitch-label" for="myonoffswitch">
+			        <span class="onoffswitch-inner"></span>
+			        <span class="onoffswitch-switch"></span>
+			    </label>
+			</div>
+		
+
+		<div class="switch-area">
+			<section class="first-part">
+				<nav class="header-menu">
+					<ul>
+					
+						<li><a href="/">主页</a></li>
+			        
+						<li><a href="/archives">所有文章</a></li>
+			        
+					</ul>
+				</nav>
+				<nav class="header-nav">
+					<div class="social">
+						
+							<a class="github" target="_blank" href="https://github.com/shitoudev" title="github">github</a>
+				        
+							<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+				        
+							<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+				        
+					</div>
+				</nav>
+			</section>
+			
+			
+			<section class="second-part">
+				<div class="widget tagcloud">
+					<a href="/tags/apache/" style="font-size: 10.00px;">apache</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/六六/" style="font-size: 20.00px;">六六</a><a href="/tags/创业/" style="font-size: 10.00px;">创业</a>
+				</div>
+			</section>
+			
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars2.githubusercontent.com/u/2024949?v=2&amp;s=150">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">zhenwen</a></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/shitoudev" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-中文版putty、winscp、sshsecure和psftp等软件爆出后门" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2012/02/13/中文版putty、winscp、sshsecure和psftp等软件爆出后门/" class="article-date">
+  	<time datetime="2012-02-13T01:30:05.000Z" itemprop="datePublished">Feb 13 2012</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      中文版Putty、WinSCP、SSHSecure和psftp等软件爆出后门
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前段时间有看到消息说中文版Putty、WinSCP软件有后门，不知道是真是假，今天收到阿里云的邮件（阿里云的邮件是10号发的），应该不假了。还好我没用中文版的，虽然英文很烂，但是至少能使用这些软件，奉劝大家能用英文版尽量用英文版吧，这些人太没道德了。我算躲过一劫呀！</p>
+<p>邮件内容：</p>
+<p>尊敬的阿里云用户:<br>您好!<br>近日，阿里云·云盾安全服务中心发现：中文版putty等SSH远程管理工具被曝出存在后门，该后门会自动窃取管理员所输入的SSH用户名与口令，并将其发送至指定云服务器上。对此进行分析，预计影响范围：中文版putty、 WinSCP、SSHSecure和psftp等软件，而这些软件的英文版本不受影响。<br>分析细节如下，请您重点关注：</p>
+<p><strong>一、受影响的云服务器特征</strong></p>
+<p><div>1．进程 .osyslog 或 .fsyslog 消耗CPU超过100~1000% ( .osyslog与 .fsyslog可能为随机)</div></p>
+<p><div>2．有网络连接往 98.126.55.226:82（大概为主控）</div></p>
+<p><div>3．机器疯狂外发数据</div></p>
+<p><div>4．/var/log被删除</div></p>
+<p><div>5．同IP旁扫出现一个域名 oxoddos.com 并且站点名带中文</div></p>
+<p><div><strong>二、检查方法</strong></div></p>
+<p><div>若云服务器或终端出现上述情况，可参照以下方法检查，确认是否受影响。</div></p>
+<p><div>1. 服务器：</div></p>
+<p><div>方法1．etc目录下存在.fsyslog或者.osyslog文件;</div></p>
+<p><div>方法2．lib目录下存在.fsyslog或者.osyslog文件。</div></p>
+<p><div>2. 个人终端：</div></p>
+<p><div>目前的杀毒软件基本支持该后门的检测，所以个人终端只需更新杀毒软件至最新版本，然后做整体的扫描检查。</div></p>
+<p><div><strong>三、修补建议</strong></div></p>
+<p><div>若受到影响，请参照如下步骤进行修补：</div></p>
+<p><div>1．卸载中文版putty，WinSCP，SSH Secure；</div></p>
+<p><div>2．下载官方的PUTTY，WinSCP，SSH Secure重新安装；</div></p>
+<p><div>3．修改云服务器等的登录信息。</div></p>
+<p><div>温馨提醒：官方链接</div></p>
+<p><div><a href="http://www.putty.org/" target="_blank" rel="external">http://www.putty.org</a></div></p>
+<p><div><a href="http://winscp.net/" target="_blank" rel="external">http://winscp.net</a></div></p>
+<p><div><a href="http://www.ssh.com/" target="_blank" rel="external">http://www.ssh.com/</a></div></p>
+<p><div><strong>四、问题下载源</strong></div></p>
+<p><div>以下链接已确认其下载文件存在后门：</div></p>
+<p><div>putty.ws</div></p>
+<p><div>www.putty.org.cn</div></p>
+<p><div>www.winscp.cc</div></p>
+<p><div>www.sshsecure.com</div></p>
+<p><div></div></p>
+<p><div>阿里云计算官方</div></p>
+<p><div>2012年2月10日</div><br>&nbsp;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2012/02/15/我和艺阳的2011年/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          我和艺阳的2011年
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2012/02/10/使用google-api和phpqrcode生成二维码/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用google api和phpqrcode生成二维码</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="中文版putty、winscp、sshsecure和psftp等软件爆出后门" data-title="中文版Putty、WinSCP、SSHSecure和psftp等软件爆出后门" data-url="http://zhenown.com/2012/02/13/中文版putty、winscp、sshsecure和psftp等软件爆出后门/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2014 zhenwen
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+  <script src="/js/main.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>js和css的顺序关系【转载】 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. head里的顺序如下，考虑会对请求有何影响：
+a. 外部js在css前面
+&lt;script src=”1.js”&gt;&lt;/script&gt;&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;&lt;link rel=”stylesheet” type=”text/css” href=”2.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js和css的顺序关系【转载】">
+<meta property="og:url" content="http://zhenown.com/2012/02/05/js和css的顺序关系【转载】/">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1. head里的顺序如下，考虑会对请求有何影响：
+a. 外部js在css前面
+&lt;script src=”1.js”&gt;&lt;/script&gt;&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;&lt;link rel=”stylesheet” type=”text/css” href=”2.css">
+<meta property="og:image" content="http://www.yuye.me/uploads/2012/02/figure.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js和css的顺序关系【转载】">
+<meta name="twitter:description" content="1. head里的顺序如下，考虑会对请求有何影响：
+a. 外部js在css前面
+&lt;script src=”1.js”&gt;&lt;/script&gt;&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;&lt;link rel=”stylesheet” type=”text/css” href=”2.css">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="https://avatars2.githubusercontent.com/u/2024949?v=2&amp;s=150">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">zhenwen</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="onoffswitch">
+			    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+			    <label class="onoffswitch-label" for="myonoffswitch">
+			        <span class="onoffswitch-inner"></span>
+			        <span class="onoffswitch-switch"></span>
+			    </label>
+			</div>
+		
+
+		<div class="switch-area">
+			<section class="first-part">
+				<nav class="header-menu">
+					<ul>
+					
+						<li><a href="/">主页</a></li>
+			        
+						<li><a href="/archives">所有文章</a></li>
+			        
+					</ul>
+				</nav>
+				<nav class="header-nav">
+					<div class="social">
+						
+							<a class="github" target="_blank" href="https://github.com/shitoudev" title="github">github</a>
+				        
+							<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+				        
+							<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+				        
+					</div>
+				</nav>
+			</section>
+			
+			
+			<section class="second-part">
+				<div class="widget tagcloud">
+					<a href="/tags/apache/" style="font-size: 10.00px;">apache</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/六六/" style="font-size: 20.00px;">六六</a><a href="/tags/创业/" style="font-size: 10.00px;">创业</a>
+				</div>
+			</section>
+			
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars2.githubusercontent.com/u/2024949?v=2&amp;s=150">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">zhenwen</a></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/shitoudev" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-js和css的顺序关系【转载】" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2012/02/05/js和css的顺序关系【转载】/" class="article-date">
+  	<time datetime="2012-02-05T09:20:15.000Z" itemprop="datePublished">Feb 5 2012</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js和css的顺序关系【转载】
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1. head里的顺序如下，考虑会对请求有何影响：</p>
+<p>a. 外部js在css前面</p>
+<p><pre>&lt;script src=”1.js”&gt;&lt;/script&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”2.css?sleep=5s”&gt;</pre><br>b. 外部js在css后面</p>
+<p><pre>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”2.css?sleep=5s”&gt;<br>&lt;script src=”1.js”&gt;&lt;/script&gt;</pre><br>c. 内部js在css前面</p>
+<p><pre>&lt;script&gt;<br>// do something<br>&lt;/script&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”2.css?sleep=5s”&gt;</pre><br>d. 内部js在css后面</p>
+<p><pre>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”2.css?sleep=5s”&gt;<br>&lt;script&gt;<br>// do something<br>&lt;/script&gt;</pre><br>e. 内联css在外联css前面</p>
+<p><pre>&lt;style&gt;<br>body { background:red; }<br>&lt;/style&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;</pre><br>f. 内联css在外联css后面</p>
+<p><pre>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;style&gt;<br>body { background:red; }<br>&lt;/style&gt;</pre><br>结果：<br>a,b – head里出现外联js，无论如何放，css文件都不能和body里的请求并行。补充：body里dom渲染取决于head里的js执行完。 （图1）<br>c – head里的内联js只要在所有外联css前面，css文件可以和body里的请求并行（图2）<br>d – head里的内联js只要在任一外联css后面，css文件就不能和body里的请求并行。补充：原因也是要等js执行完（图1）<br>e – firefox/ie下，要等1.css加载完生效。safari/chrome下，则先生效，再加载1.css<br>f – 等1.css加载完生效<br><a href="http://www.yuye.me/uploads/2012/02/figure.png" target="_blank" rel="external"><img src="http://www.yuye.me/uploads/2012/02/figure.png" alt="" title="figure"></a><br>2. 内联js要等它前面的所有外联css文件加载完后执行。之前写过一篇<a href="http://www.douban.com/note/153864670/" target="_blank" rel="external">子资源原理的笔记</a>。</p>
+<p><pre>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;script&gt;<br>s_time = +new Date;  // 5s后才执行，所以在这里记录开始时间是不准确的。<br>&lt;/script&gt;</pre><br>3. 外联js放在页面最后，高级浏览器会自动做优化。如：</p>
+<p><pre>&lt;head&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”2.css?sleep=5s”&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;img src=”1.png”&gt;<br>&lt;img src=”2.png”&gt;<br>&lt;img src=”3.png”&gt;<br>&lt;script src=”1.js”&gt;&lt;/script&gt;<br>&lt;/body&gt;</pre><br>firefox/chrome/safari加载的优化处理相似。见图3。</p>
+<p>4. 内联长执行时间js，无论放在页面任何位置，都会影响整个页面的渲染。</p>
+<p><pre>&lt;body&gt;<br>&lt;img src=”1.png”&gt;<br>&lt;img src=”2.png”&gt;<br>&lt;img src=”3.png”&gt;</pre></p>
+<p>&lt;button id=”bn”&gt;button&lt;/button&gt;<br>&lt;script type=”text/javascript”&gt;<br>  document.getElementById(‘bn’).onclick = function() {<br>    alert(1);<br>  }<br>  // 正常渲染时间<br>  document.body.appendChild(document.createTextNode(+new Date - s_time + ‘ms’));<br>&lt;/script&gt;</p>
+<p>&lt;script&gt;<br>// 执行5s。重新打开页面（不是刷新），整个页面空白5s。<br>// 前面的dom结构正常渲染，但不显示，等5s后全部显示出来。<br>&lt;/script&gt;<br>&lt;/body&gt;<br>在页面初始执行阶段如果有长执行时间的内联js，对性能的影响是非常非常严重的！但是，如果把那段执行5s的js放到外部就不会有上述影响，或者移到domreay/onload后执行也可以。</p>
+<p>依据上述结论组织页面中的css和js才会更合理。</p>
+<p>文章转载自：<a href="http://hikejun.com/blog/2012/02/02/js%E5%92%8Ccss%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%85%B3%E7%B3%BB/" target="_blank" rel="external">http://hikejun.com/blog/2012/02/02/js%E5%92%8Ccss%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%85%B3%E7%B3%BB/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2012/02/06/全国人民都在看晚会，我还在洗碗/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          全国人民都在看晚会，我还在洗碗
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2012/02/03/无意发现qq使用2000天了/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">无意发现QQ使用2000天了</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="js和css的顺序关系【转载】" data-title="js和css的顺序关系【转载】" data-url="http://zhenown.com/2012/02/05/js和css的顺序关系【转载】/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2014 zhenwen
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+  <script src="/js/main.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>

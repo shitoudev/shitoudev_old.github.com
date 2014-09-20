@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://zhenown.com/archives/page/2/">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="https://avatars2.githubusercontent.com/u/2024949?v=2&amp;s=150">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">zhenwen</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="onoffswitch">
+			    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+			    <label class="onoffswitch-label" for="myonoffswitch">
+			        <span class="onoffswitch-inner"></span>
+			        <span class="onoffswitch-switch"></span>
+			    </label>
+			</div>
+		
+
+		<div class="switch-area">
+			<section class="first-part">
+				<nav class="header-menu">
+					<ul>
+					
+						<li><a href="/">主页</a></li>
+			        
+						<li><a href="/archives">所有文章</a></li>
+			        
+					</ul>
+				</nav>
+				<nav class="header-nav">
+					<div class="social">
+						
+							<a class="github" target="_blank" href="https://github.com/shitoudev" title="github">github</a>
+				        
+							<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+				        
+							<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+				        
+					</div>
+				</nav>
+			</section>
+			
+			
+			<section class="second-part">
+				<div class="widget tagcloud">
+					<a href="/tags/apache/" style="font-size: 10.00px;">apache</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/六六/" style="font-size: 20.00px;">六六</a><a href="/tags/创业/" style="font-size: 10.00px;">创业</a>
+				</div>
+			</section>
+			
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars2.githubusercontent.com/u/2024949?v=2&amp;s=150">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">zhenwen</a></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/shitoudev" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      
+  
+    <article id="post-firebugfirephp调试你的php" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2012/02/08/firebugfirephp调试你的php/" class="article-date">
+  	<time datetime="2012-02-08T10:05:21.000Z" itemprop="datePublished">Feb 8 2012</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/02/08/firebugfirephp调试你的php/">Firebug+FirePHP调试你的php</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先肯定得安装Firebug和FirePHP，FirePHP是Firebug的扩展，firephp的主页下载扩展：<a href="http://www.firephp.org/" title="FirePHP" target="_blank" rel="external">http://www.firephp.org/</a>，根据自己的浏览器版本和Firebug的版本下载需要的FirePHP吧。</p>
+<p>之后下载服务器端的php，我们选择 <a href="http://www.firephp.org/DownloadRelease/FirePHPLibrary-FirePHPCore-0.3.2" target="_blank" rel="external">Download FirePHPCore 0.3.2 (zip)</a>。下载后的文件分为php4和php5。下面是我在thinkphp下面调试的代码。</p>
+<p><pre>// 载入FirePHP<br>import(“@.Behavior.FirePHP”);<br>$firePhp = FirePHP::getInstance(true);<br>// 输出信息<br>$firePhp-&gt;info(array(“日”, “一”, “二”, “三”, “四”, “五”, “六”));<br>//$firePhp-&gt;error(array(“日”, “一”, “二”, “三”, “四”, “五”, “六”));<br>// 跟踪程序的执行情况<br>$firePhp-&gt;trace(“hello”);</pre><br>然后你就可以在Firebug的控制台里面看到这些信息了。</p>
+<p><a href="http://www.yuye.me/uploads/2012/02/firephp.jpg" target="_blank" rel="external"><img src="http://www.yuye.me/uploads/2012/02/firephp-1024x211.jpg" alt="" title="firephp"></a></p>
+<p>点击输出的信息会显示更多：</p>
+<p><a href="http://www.yuye.me/uploads/2012/02/fire.jpg" target="_blank" rel="external"><img src="http://www.yuye.me/uploads/2012/02/fire.jpg" alt="" title="fire"></a></p>
+<p>“hello”以上的是输出的信息，下面的是程序的执行情况，大家可以看到我正在用thinkphp 3.0在测试，然后thinkphp一路执行的情况也一目了然。</p>
+<p>FirePHP有几种显示方式：</p>
+<p>FirePHP::log,FirePHP::info,FirePHP::warn,FirePHP::error，都会在控制台中显示出一行结果，只不过显示的图标不同。</p>
+<p>FirePHP::table，会在控制台中显示出一个表格。更多用处慢慢研究了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-全国人民都在看晚会，我还在洗碗" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2012/02/06/全国人民都在看晚会，我还在洗碗/" class="article-date">
+  	<time datetime="2012-02-06T12:29:01.000Z" itemprop="datePublished">Feb 6 2012</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/02/06/全国人民都在看晚会，我还在洗碗/">全国人民都在看晚会，我还在洗碗</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>正月15日，中国传统的元宵佳节，我勤劳的背影！</p>
+<p><a href="http://www.yuye.me/uploads/2012/02/IMG_0314.jpg" target="_blank" rel="external"><img src="http://www.yuye.me/uploads/2012/02/IMG_0314-768x1024.jpg" alt="" title="IMG_0314"></a></p>
+<p>今晚吃的是老婆买的芝麻馅的汤圆，香香甜甜的，吃到最后有点腻了。最后还干了一碗饭，太能吃了。吃完之后老婆说让我洗碗，我知道她在生我的气，好吧，我洗了。</p>
+<p>不洗不知道，一洗才知道，这样洗碗站的时间久了腰有点酸，老婆，你辛苦了！每天5点半下班，回来之后还要做饭给我吃，这样的老婆哪里寻哦，哈哈。后来电话给艺阳，他快能走了，等他生日那天写篇关于他的2011年。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-js和css的顺序关系【转载】" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2012/02/05/js和css的顺序关系【转载】/" class="article-date">
+  	<time datetime="2012-02-05T09:20:15.000Z" itemprop="datePublished">Feb 5 2012</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/02/05/js和css的顺序关系【转载】/">js和css的顺序关系【转载】</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1. head里的顺序如下，考虑会对请求有何影响：</p>
+<p>a. 外部js在css前面</p>
+<p><pre>&lt;script src=”1.js”&gt;&lt;/script&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”2.css?sleep=5s”&gt;</pre><br>b. 外部js在css后面</p>
+<p><pre>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”2.css?sleep=5s”&gt;<br>&lt;script src=”1.js”&gt;&lt;/script&gt;</pre><br>c. 内部js在css前面</p>
+<p><pre>&lt;script&gt;<br>// do something<br>&lt;/script&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”2.css?sleep=5s”&gt;</pre><br>d. 内部js在css后面</p>
+<p><pre>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”2.css?sleep=5s”&gt;<br>&lt;script&gt;<br>// do something<br>&lt;/script&gt;</pre><br>e. 内联css在外联css前面</p>
+<p><pre>&lt;style&gt;<br>body { background:red; }<br>&lt;/style&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;</pre><br>f. 内联css在外联css后面</p>
+<p><pre>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;style&gt;<br>body { background:red; }<br>&lt;/style&gt;</pre><br>结果：<br>a,b – head里出现外联js，无论如何放，css文件都不能和body里的请求并行。补充：body里dom渲染取决于head里的js执行完。 （图1）<br>c – head里的内联js只要在所有外联css前面，css文件可以和body里的请求并行（图2）<br>d – head里的内联js只要在任一外联css后面，css文件就不能和body里的请求并行。补充：原因也是要等js执行完（图1）<br>e – firefox/ie下，要等1.css加载完生效。safari/chrome下，则先生效，再加载1.css<br>f – 等1.css加载完生效<br><a href="http://www.yuye.me/uploads/2012/02/figure.png" target="_blank" rel="external"><img src="http://www.yuye.me/uploads/2012/02/figure.png" alt="" title="figure"></a><br>2. 内联js要等它前面的所有外联css文件加载完后执行。之前写过一篇<a href="http://www.douban.com/note/153864670/" target="_blank" rel="external">子资源原理的笔记</a>。</p>
+<p><pre>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;script&gt;<br>s_time = +new Date;  // 5s后才执行，所以在这里记录开始时间是不准确的。<br>&lt;/script&gt;</pre><br>3. 外联js放在页面最后，高级浏览器会自动做优化。如：</p>
+<p><pre>&lt;head&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”1.css?sleep=5s”&gt;<br>&lt;link rel=”stylesheet” type=”text/css” href=”2.css?sleep=5s”&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;img src=”1.png”&gt;<br>&lt;img src=”2.png”&gt;<br>&lt;img src=”3.png”&gt;<br>&lt;script src=”1.js”&gt;&lt;/script&gt;<br>&lt;/body&gt;</pre><br>firefox/chrome/safari加载的优化处理相似。见图3。</p>
+<p>4. 内联长执行时间js，无论放在页面任何位置，都会影响整个页面的渲染。</p>
+<p><pre>&lt;body&gt;<br>&lt;img src=”1.png”&gt;<br>&lt;img src=”2.png”&gt;<br>&lt;img src=”3.png”&gt;</pre></p>
+<p>&lt;button id=”bn”&gt;button&lt;/button&gt;<br>&lt;script type=”text/javascript”&gt;<br>  document.getElementById(‘bn’).onclick = function() {<br>    alert(1);<br>  }<br>  // 正常渲染时间<br>  document.body.appendChild(document.createTextNode(+new Date - s_time + ‘ms’));<br>&lt;/script&gt;</p>
+<p>&lt;script&gt;<br>// 执行5s。重新打开页面（不是刷新），整个页面空白5s。<br>// 前面的dom结构正常渲染，但不显示，等5s后全部显示出来。<br>&lt;/script&gt;<br>&lt;/body&gt;<br>在页面初始执行阶段如果有长执行时间的内联js，对性能的影响是非常非常严重的！但是，如果把那段执行5s的js放到外部就不会有上述影响，或者移到domreay/onload后执行也可以。</p>
+<p>依据上述结论组织页面中的css和js才会更合理。</p>
+<p>文章转载自：<a href="http://hikejun.com/blog/2012/02/02/js%E5%92%8Ccss%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%85%B3%E7%B3%BB/" target="_blank" rel="external">http://hikejun.com/blog/2012/02/02/js%E5%92%8Ccss%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%85%B3%E7%B3%BB/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-无意发现qq使用2000天了" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2012/02/03/无意发现qq使用2000天了/" class="article-date">
+  	<time datetime="2012-02-03T14:51:51.000Z" itemprop="datePublished">Feb 3 2012</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/02/03/无意发现qq使用2000天了/">无意发现QQ使用2000天了</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[caption id=”attachment_29” align=”alignnone” width=”279” caption=”2000天的QQ”]<a href="http://www.yuye.me/uploads/2012/02/qq2000.jpg" target="_blank" rel="external"><img src="http://www.yuye.me/uploads/2012/02/qq2000.jpg" alt="我的QQ信息" title="qq2000"></a>[/caption]</p>
+<p>早已忘记是和哪位童鞋第一次去网吧了，也早已忘记是哪位童鞋教我注册的这个QQ，2000天也有必要回顾下，04年开始。哈哈。</p>
+<p>最初去网吧我只记得好多同学是为CS去的，因为我刚开始对3D有点晕，所以CS我一直不会，希望介个不会遭到鄙视。学生时代在网吧玩的最多的应该是QQ和泡泡堂，期待QQ图标闪烁时的激动，总是和对方聊的不亦乐乎，还有泡泡堂这个游戏挺“益智”的，哈哈，玩过的可能有体会。还挂机刷过PP的等级呢，反正现在等级是蛮高的。不扯游戏了，后来通过QQ还和郑州的一位朋友成为笔友，那会儿还是流行信封的，通了几次信件后知道对方是解剖尸体的，才对对方“肃然起敬”呀，多次询问对方晚上睡的可安好，他表示没大碍。现在我能理解，这是他的职业！后来也许是大家想问的都问完了，联系也中断了。唯一的一位笔友。</p>
+<p>第二个记忆比较深刻是广东清远的一个女生，也忘了是怎么在QQ上相识的，和她聊的应该算最久的，有1年吧，她应该是个非常独立自主的女生，最近了解到它已经生了个小公主，有开玩笑和她认个娃娃亲，O(∩_∩)O~。不过我儿子比她女儿要小。</p>
+<p>好了，读书的时候最讨厌写作文了，现在也写了这么多，希望能越写越多、越写越好，孩子他妈，如果你看到这篇文章别和我发脾气哦，小心眼的老婆。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-小六六的一张萌照" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2011/12/28/小六六的一张萌照/" class="article-date">
+  	<time datetime="2011-12-28T05:59:29.000Z" itemprop="datePublished">Dec 28 2011</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/六六/">六六</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/12/28/小六六的一张萌照/">小六六的一张萌照</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.yuye.me/uploads/2011/12/liuliu.jpg" target="_blank" rel="external"><img src="http://www.yuye.me/uploads/2011/12/liuliu-239x300.jpg" alt="" title="liuliu"></a></p>
+<p>过年回去要好好“捉弄捉弄你”，呵呵。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2011/12/28/hello-world/" class="article-date">
+  	<time datetime="2011-12-28T05:03:13.000Z" itemprop="datePublished">Dec 28 2011</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/12/28/hello-world/">世界，你好！这是系统发的，不关我的事呀！</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>欢迎使用 WordPress。！</p>
+<p>&nbsp;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+    </nav>
+  
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2014 zhenwen
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+  <script src="/js/main.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>
